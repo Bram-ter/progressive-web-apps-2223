@@ -1,0 +1,112 @@
+
+:root {
+  --indigo: #2E20CA;
+  --light-white: #FDF7FF;
+}
+
+article > a,
+div > a {
+  cursor: pointer;
+  display: block;
+  margin-left: 0.3em;
+  margin-top: 1.3em;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid var(--indigo);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+article > a:before,
+div > a:before {
+  content: " ";
+  width: 1.5625em;
+  height: 2px;
+  background: var(--indigo);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: 0.3s linear, width 0.3s linear;
+}
+
+article > a p,
+div > a p {
+  margin-bottom: .85em;
+  margin-top: .85em;
+  padding-left: 4em;
+  padding-right: 2em;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--indigo);
+}
+
+a span:nth-child(1) {
+  height: 2px;
+  width: 1.5625em;
+  top: -2px;
+  left: 0.625em;
+  position: absolute;
+  background-color: var(--light-white);
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+a span:nth-child(3) {
+  height: 2px;
+  width: 1.5625em;
+  right: 1.875em;
+  bottom: -2px;
+  position: absolute;
+  background-color: var(--light-white);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+a span:nth-child(4) {
+  height: 2px;
+  width: 0.625em;
+  right: 0.625em;
+  position: absolute;
+  background-color: var(--light-white);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+article > a:hover,
+div > a:hover {
+  color: var(--light-white);
+  background: var(--indigo);
+}
+
+article > a:hover:before,
+div > a:hover:before {
+  width: 1rem;
+  background-color: var(--light-white);
+}
+
+article > a:hover p,
+div > a:hover p {
+  color: var(--light-white);
+  padding-left: 3em;
+}
+
+article > a:hover span:nth-child(1),
+div > a:hover span:nth-child(1) {
+  left: -2px;
+  width: 0px;
+}
+
+article > a:hover span:nth-child(3),
+article > a:hover span:nth-child(4),
+div > a:hover span:nth-child(3),
+div > a:hover span:nth-child(4) {
+  right: 0;
+  width: 0;
+}
+
+article > a,
+div > a {
+  max-width: 15em;
+  width: auto;
+}
