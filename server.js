@@ -4,7 +4,7 @@ const app = express()
 
 const port = process.env.PORT || 3000
 
-let ejs = require("ejs");
+const ejs = require("ejs");
 
 const routes = require("./routes/routes");
 
