@@ -5,9 +5,9 @@
 
           <h2><%= item.full_name %></h2>
 
-          <p>${repo.description}</p>
+          <p><%= item.description %></p>
 
-          <a href="${repo.html_url}" target="_blank">
+          <a href="/details/<%= item.name %>" target="_blank">
             <span></span>
             <p>View project</p>
             <span></span>

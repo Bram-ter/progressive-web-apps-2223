@@ -1,11 +1,18 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js' 
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+// import * as THREE from '../../node_modules/three/build/three.module.js'
+// import { OrbitControls } from '../../node_modules/three/examples/jsm/controls/OrbitControls.js'
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 // Scene
 const scene = new THREE.Scene()
 
 const canvas = document.querySelector('canvas')
+canvas.style.display = 'block';
+
+const figure = docuemnt.querySelector('body main figure')
+figure.style.display = 'none';
 
 /**
  * Object
