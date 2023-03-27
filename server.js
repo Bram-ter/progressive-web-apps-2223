@@ -1,6 +1,11 @@
+const fs = require("fs");
+const https = require("https");
 const express = require('express');
 const app = express()
 const port = process.env.PORT || 3000
+
+const cert = fs.readFileSync("localhost.pem", "utf-8");
+const key = fs.readFileSync("localhost-key.pem", "utf-8");
 
 const ejs = require("ejs");
 
@@ -14,4 +19,4 @@ app.set('view engine', 'ejs');
 
 app.use(routes)
 
-app.listen(port, () => console.info(`App listening on port ${port}`));
+https.createServer({ key, cert }, app).listen(port);

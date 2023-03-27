@@ -110,3 +110,18 @@ div > a {
   max-width: 15em;
   max-height: 3em;
 }
+
+/* My work */
+
+.work-card div > a {
+  color: var(--indigo);
+}
+
+.work-card div > a:after {
+  content: ' 👉';
+  transition: .75s;
+}
+
+.work-card div a:hover:after  {
+  margin-left: 4px;
+}

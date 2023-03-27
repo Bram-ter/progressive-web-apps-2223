@@ -1,0 +1,21 @@
+{
+  "name": "Bram's Portfolio",
+  "short_name": "Portfolio Bram",
+  "theme_color": "#2e20ca",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/small.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/medium.png",
+      "sizes": "173x174",
+      "type": "image/png"
+    }
+  ]
+}
