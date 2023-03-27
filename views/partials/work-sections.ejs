@@ -1,24 +1,14 @@
-<% repos.forEach(function(item) { %>
 <section>
-    <div>
-        <article>
+  <% projects.forEach(function(item) { %>
+      <article class="work-card">
+            <img src="<%= item.image %>" alt="<%= item.repo %>" />
+            <div>
+              <h2><%= item.repo %></h2>
 
-          <h2><%= item.full_name %></h2>
+              <p><%= item.description %></p>
 
-          <p><%= item.description %></p>
-
-          <a href="/details/<%= item.name %>" target="_blank">
-            <span></span>
-            <p>View project</p>
-            <span></span>
-            <span></span>
-          </a>
-
-        </article>
-    </div>
-
-    <figure>
-      <img src="https://picsum.photos/200" alt="" />
-    </figure>
+              <a href="/details/<%= item.repo %>">To page 👉</a>
+            </div>
+      </article>
+  <% }); %>
 </section>
-<% }); %>

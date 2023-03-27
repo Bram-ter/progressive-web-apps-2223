@@ -6,20 +6,18 @@ const home = (req, res) => {
 
 const myWork = (req, res) => {
   const username = "Bram-ter"
-  let url = `https://api.github.com/users/${username}/repos`
+  let url = `https://gh-pinned-repos.egoist.dev/?username=${username}`
 
   fetch(url)
     .then(response => response.json())
-    .then(repos => {
-      res.render('pages/my-work', { repos });
+    .then(projects => {
+      res.render('pages/my-work', { projects });
+      console.log(projects)
     })
     .catch(error => console.error(error));
 };
 
 const details = (req, res) => {
-  // const username = "Bram-ter"
-  // let url = `https://api.github.com/users/${username}/repos`
-
   const username = "Bram-ter"
   const repoName = req.params.repoName; // get the repository name from request params
   let url = `https://api.github.com/repos/${username}/${repoName}`;
@@ -28,7 +26,7 @@ const details = (req, res) => {
     .then(response => response.json())
     .then(repo => {
       res.render('pages/details', { repo });
-      console.log(repo)
+      // console.log(repo)
     })
     .catch(error => console.error(error));
 };
