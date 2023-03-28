@@ -1,7 +1,11 @@
 const fetch = require('node-fetch')
 
 const home = (req, res) => {
-  res.render('pages/index', {/* vars here*/});
+  res.render('pages/index', {});
+};
+
+const offline = (req, res) => {
+  res.render('pages/error', {});
 };
 
 const myWork = (req, res) => {
@@ -26,7 +30,7 @@ const details = (req, res) => {
     .then(response => response.json())
     .then(repo => {
       res.render('pages/details', { repo });
-      // console.log(repo)
+      console.log(repo)
     })
     .catch(error => console.error(error));
 };
@@ -34,5 +38,6 @@ const details = (req, res) => {
 module.exports = {
   home,
   myWork,
-  details
+  details,
+  offline
 }

@@ -1,16 +1,25 @@
-const CACHE_NAME = 'my-site-cache-v1';
-const cachedFiles = [
-  '/',
-  '/my-work'
-];
+const CACHE_NAME = 'site-cache-v1';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(cachedFiles);
-      })
+    caches.open(CACHE_NAME).then(function(cache) {
+        return cache.addAll([
+          '/',
+          '/my-work',
+          '/offline',
+
+          'css/style.css',
+          'css/buttons.css',
+
+          'js/enable-sw.js',
+          
+          'assets/room_illustration.svg',
+          'assets/linkedin.svg',
+          'assets/github.svg',
+          'fonts/Merriweather/Merriweather-Light.ttf',
+          'fonts/Hema_Futura/FuturaHEMAProOT-Book.otf'
+        ]);
+    })
   );
 });
 
@@ -41,14 +50,11 @@ self.addEventListener("fetch", (e) => {
                               return response
                           })
                   })
-                  .catch(() => {
-                      console.log('[Service Worker] Fetch failed; returning offline page instead.')
-                      // If the request fails, return the offline page
-                      if (e.request.mode === 'navigate') {
-                          return caches.open(CACHE_NAME)
-                              .then(cache => cache.match(OFFLINE_URL))
-                      }
-                  })
+                  
           })
+          .catch(() => caches.open(CACHE_NAME)
+           .then(cache => 
+            cache.match('/offline'))
+      )
   )
 })

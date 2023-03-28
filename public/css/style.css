@@ -102,6 +102,11 @@ body > a:hover:before {
   transform: translate(-4px);
 }
 
+body > article {
+  margin-top: 5em;
+  margin-left: .5em;
+}
+
 body main {
   display: flex;
   flex-direction: column;
@@ -248,7 +253,7 @@ body section .work-card div {
   }
 
   body main figure img {
-    min-width: 25em;
+    min-width: 25em;  
   }
 
   /* my-work */

@@ -9,6 +9,8 @@ router.get('/', controller.home);
 // Get home from the controller and asign it to the '/my-work'
 router.get('/my-work', controller.myWork);
 
+router.get('/offline', controller.offline);
+
 router.get('/details/:repoName', controller.details);
 
 module.exports = router;

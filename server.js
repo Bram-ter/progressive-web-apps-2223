@@ -14,6 +14,11 @@ const routes = require("./routes/routes");
 /* Middleware */
 app.use(express.static("./public"));
 
+app.use(function(req, res, next) {
+    res.locals.request = req;
+    next();
+});
+
 /* Set template engine */
 app.set('view engine', 'ejs');
 
