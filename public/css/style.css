@@ -71,11 +71,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2.6em;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 body > a {
@@ -118,23 +118,23 @@ body main figure {
 
 body main figure img {
   width: 70%;
-  min-width: 25em;
+  min-width: 15em;
   margin: 0 auto;
 }
 
-body main article {
+body main header {
   display: flex;
   justify-content: center;
-  padding: 2em;
+  padding: 1em;
 }
 
-body main article div {
+body main header div {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-body main article div h3 {
+body main header div h3 {
   flex: 1 1 100%;
 }
 
@@ -194,6 +194,19 @@ body section .work-card div {
 
 
 @media (min-width: 720px) {
+  h1 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 2.6em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+
   footer {
     width: 100%;
     position: absolute;
@@ -217,7 +230,7 @@ body section .work-card div {
     height: 100dvh;
   }
 
-  body main article {
+  body main header {
     width: 50%;
     padding: 0;
     padding-left: 2em;
@@ -225,13 +238,17 @@ body section .work-card div {
     place-content: center;
   }
 
-  body main article div {
+  body main header div {
     width: 80%;
   }
 
   body main > section {
     width: 50%;
     padding: 0;
+  }
+
+  body main figure img {
+    min-width: 25em;
   }
 
   /* my-work */

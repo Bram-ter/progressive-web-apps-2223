@@ -4,8 +4,8 @@
   --light-white: #FDF7FF;
 }
 
-main article > a,
-main article div > a {
+main header > a,
+main header div > a {
   cursor: pointer;
   display: block;
   margin-left: 0.3em;
@@ -17,8 +17,8 @@ main article div > a {
   transition: all 0.3s ease-in-out;
 }
 
-main article > a:before,
-main article div > a:before {
+main header > a:before,
+main header div > a:before {
   content: " ";
   width: 1.5625em;
   height: 2px;
@@ -31,8 +31,8 @@ main article div > a:before {
   transition: 0.3s linear, width 0.3s linear;
 }
 
-main article > a p,
-main article div > a p {
+main header > a p,
+main header div > a p {
   margin-bottom: .85em;
   margin-top: .85em;
   padding-left: 4em;
@@ -73,8 +73,8 @@ a span:nth-child(4) {
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
-main article > a:hover,
-main article div > a:hover {
+main header > a:hover,
+main header div > a:hover {
   color: var(--light-white);
   background: var(--indigo);
 }
