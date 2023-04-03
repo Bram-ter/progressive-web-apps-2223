@@ -2,18 +2,15 @@ const CACHE_NAME = 'site-cache-v1';
 const CORE_ASSETS = [
   '/offline',
 
-  'css/style.css',
-  'css/buttons.css',
-
-  'js/enable-sw.js',
+  'dist/script.min.js',
+  'dist/style.min.css',
 
   'manifest.json',
 
   'assets/room_illustration.svg',
   'assets/linkedin.svg',
   'assets/github.svg',
-  'fonts/Merriweather/Merriweather-Light.ttf',
-  'fonts/Hema_Futura/FuturaHEMAProOT-Book.otf'
+  'fonts/Hema_Futura/FuturaHEMAProOT-Book.otf',
 ]
 
 // * Install * //

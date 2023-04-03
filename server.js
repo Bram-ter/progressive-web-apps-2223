@@ -15,7 +15,10 @@ const routes = require("./routes/routes");
 app.use(express.static("./public"));
 
 app.use(function(req, res, next) {
+    // Add the req object to res.locals, so it can be accessed in subsequent middleware functions and routes
     res.locals.request = req;
+
+    // Call the next middleware function in the chain
     next();
 });
 

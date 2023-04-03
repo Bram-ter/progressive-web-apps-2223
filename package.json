@@ -1,8 +1,9 @@
 {
-  "name": "project-week-1",
+  "name": "pwa-minor-web",
   "private": true,
   "version": "0.0.1",
   "scripts": {
+    "prestart": "gulp",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -12,6 +13,12 @@
     "three": "^0.148.0"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-uglify": "^3.0.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "node-fetch": "^2.6.9",

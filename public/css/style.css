@@ -26,13 +26,9 @@
 /* Fonts */
 
 @font-face {
-  font-family: merriweather-light;
-  src: url(../fonts/Merriweather/Merriweather-Light.ttf) format('truetype');
-}
-
-@font-face {
   font-family: futura;
   src: url(../fonts/Hema_Futura/FuturaHEMAProOT-Book.otf) format('opentype');
+  font-display: swap;
 }
 
 /* Global */
@@ -50,10 +46,6 @@ canvas {
 
 a {
   text-decoration: none;
-}
-
-a, button {
-  font-family: merriweather-light;
 }
 
 ul {
