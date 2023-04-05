@@ -36,6 +36,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: futura;
   color: var(--indigo);
 }
@@ -169,6 +170,13 @@ body section {
   align-content: space-around;
 }
 
+body section .spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 body section .work-card {
   display: flex;
   flex-direction: column;
@@ -219,6 +227,22 @@ body section .work-card div {
   body main {
     height: 100dvh;
     flex-direction: row;
+  }
+
+  body .error-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  body .error-section h1 {
+    font-size: 1.7em;
+  }
+
+  body .error-section img {
+    width: 50%;
   }
 
   body main figure {

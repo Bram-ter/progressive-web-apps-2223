@@ -1,14 +1,14 @@
 <section>
-  <% projects.forEach(function(item) { %>
+    <% projects.forEach(function(item) { %>
       <article class="work-card">
-            <img src="<%= item.image %>" alt="<%= item.repo %>" />
-            <div>
-              <h2><%= item.repo %></h2>
+        <img src="<%= item.image %>" alt="<%= item.repo %>" />
+        <div>
+          <h2><%= item.repo %></h2>
 
-              <p><%= item.description %></p>
+          <p><%= item.description %></p>
 
-              <a href="/details/<%= item.repo %>">To page</a>
-            </div>
+          <a href="/details/<%= item.repo %>">To page</a>
+        </div>
       </article>
-  <% }); %>
+    <% }); %>
 </section>

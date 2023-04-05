@@ -23,7 +23,7 @@ const myWork = (req, res) => {
 
 const details = (req, res) => {
   const username = "Bram-ter"
-  const repoName = req.params.repoName; // get the repository name from request params
+  const repoName = req.params.repoName;
   let url = `https://api.github.com/repos/${username}/${repoName}`;
 
   fetch(url)

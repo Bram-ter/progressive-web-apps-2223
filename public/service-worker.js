@@ -1,5 +1,7 @@
 const CACHE_NAME = 'site-cache-v1';
 const CORE_ASSETS = [
+  '/',
+  'my-work',
   '/offline',
 
   'dist/script.min.js',
@@ -8,6 +10,7 @@ const CORE_ASSETS = [
   'manifest.json',
 
   'assets/room_illustration.svg',
+  'assets/error_illustration.svg',
   'assets/linkedin.svg',
   'assets/github.svg',
   'fonts/Hema_Futura/FuturaHEMAProOT-Book.otf',
